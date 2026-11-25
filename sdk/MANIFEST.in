@@ -1,0 +1,4 @@
+include pyproject.toml setup.py
+recursive-include wheels pandora_runtime-*.whl
+recursive-include python *.py
+recursive-include lib *

@@ -1,0 +1,18 @@
+{
+  "model": "clef-flash",
+  "state": {
+    "task": "Look at the attached image and answer the question."
+  },
+  "questions": {
+    "answer": {
+      "type": "choice",
+      "instructions": "What equipment is the person in yellow standing on?",
+      "criteria": {
+        "A": "Ice skates",
+        "B": "A snowboard",
+        "C": "Snowshoes",
+        "D": "A pair of skis"
+      }
+    }
+  }
+}

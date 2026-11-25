@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=68", "wheel>=0.41"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pandora-clef-flash"
+dynamic = ["version"]
+description = "Clef-Flash Jev inference SDK for Linux AArch64"
+license = {text = "Apache-2.0; bundled third-party components retain their applicable terms."}
+requires-python = ">=3.10,<3.13"
+dependencies = ["pandora-runtime>=1.0.2,<2"]
+
+[tool.setuptools.dynamic]
+version = {attr = "pandora_clef_flash._version.__version__"}

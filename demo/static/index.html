@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clef-Flash · On-device decisions</title>
+  <link rel="icon" type="image/svg+xml" href="/static/pandora-mark.svg">
+  <link rel="stylesheet" href="/static/style.css?v=performance-footer-2">
+  <script src="/static/app.js?v=performance-footer-2" defer></script>
+</head>
+<body>
+<header class="shell header">
+  <h1>Clef-Flash <span>See. Ask. Decide.</span></h1>
+  <span id="connection" class="status" role="status">Connecting…</span>
+  <button id="retry-connection" class="secondary" hidden>Retry connection</button>
+  <button id="reload-model" class="secondary" hidden>Reload model</button>
+  <div class="brand"><img class="logo" src="/static/logo.png" alt="APLUX"><span class="divider"></span><img class="mark" src="/static/pandora-mark.svg" alt=""><span class="name">Pandora</span></div>
+</header>
+<main class="shell">
+  <div class="workspace">
+    <section class="panel input-panel"><div class="panel-title"><h2><label for="state">State</label></h2><button id="reset" class="text-button">Reset inputs</button></div>
+      <textarea id="state" rows="4" placeholder="Enter text or background context…" spellcheck="false"></textarea>
+      <div class="image-heading"><span>Image <span class="muted">(optional)</span></span><span id="image-name" class="muted"></span></div>
+      <div class="image-frame"><img id="preview" alt="Selected input image" hidden><button id="no-image" class="upload-empty">+ Upload image<span>Optional · JPEG / PNG</span></button><button id="enlarge" class="image-action" hidden>Enlarge</button></div>
+      <div id="image-controls" class="image-controls" hidden><button id="upload-button" class="secondary">Replace image</button><input type="file" id="upload" accept="image/jpeg,image/png" hidden><button id="remove-image" class="text-button">Remove image</button></div>
+      <div class="template-area"><span class="muted">Or load a template</span><div id="presets" class="presets" aria-label="Load a template"></div></div>
+    </section>
+    <div class="right-stack">
+      <section class="panel question-panel"><div class="panel-title"><h2>Question <span id="question-count" class="muted"></span></h2><button id="add-question" class="text-button">+ Add question</button></div>
+        <div id="questions"></div>
+        <div class="run-row"><span id="elapsed" class="muted" role="status"></span><button id="run" class="primary" disabled>Run decision →</button></div>
+        <div id="error" class="error" role="alert" hidden></div>
+      </section>
+      <section class="panel results-panel"><div class="panel-title"><h2>Answer</h2><span id="summary-time" class="muted"></span></div>
+        <div id="result-state" class="result-state" role="status">Ask a question to get started.</div>
+        <div id="results" aria-live="polite"></div>
+      </section>
+    </div>
+  </div>
+  <section class="performance" aria-label="Inference performance"><div class="performance-heading"><h2>Performance</h2><span id="metrics-status">Run a decision to view performance</span></div><div id="metrics" aria-live="polite"></div></section>
+  <p class="model-source muted">Model: <a href="https://huggingface.co/Cloudflare/clef-flash" target="_blank" rel="noopener">Cloudflare/Clef-Flash</a> · Based on <a href="https://huggingface.co/Qwen/Qwen3.5-9B" target="_blank" rel="noopener">Qwen3.5-9B</a></p>
+</main>
+<dialog id="image-dialog"><button id="close-image" class="secondary">Close preview</button><img id="full-image" alt="Full-size selected input"></dialog>
+</body>
+</html>

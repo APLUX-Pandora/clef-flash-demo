@@ -1,0 +1,47 @@
+[
+  {
+    "id": "skiing", "title": "Understand a scene", "subtitle": "Learning to ski", "type_label": "Choice",
+    "source": "APLUX authored illustration", "file": "skiing.jpeg",
+    "request": {"model": "clef-flash", "state": {"task": "Look at the attached image and answer the question."}, "questions": {"answer": {"type": "choice", "instructions": "What equipment is the person in yellow standing on?", "criteria": {"A": "Ice skates", "B": "A snowboard", "C": "Snowshoes", "D": "A pair of skis"}}}},
+    "reference": {"answer": "D"}
+  },
+  {
+    "id": "sandwich", "title": "Check what is present", "subtitle": "A sandwich on a plate", "type_label": "Yes / no",
+    "source": "APLUX authored illustration", "file": "sandwich.jpeg",
+    "request": {"model": "clef-flash", "state": {"task": "Look at the attached image and answer the question."}, "questions": {"answer": {"type": "noul", "instructions": "Does the plate hold a sandwich?"}}},
+    "reference": {"answer": "true"}
+  },
+  {
+    "id": "food-web", "title": "Read a diagram", "subtitle": "A rabbit in the food web", "type_label": "Choice",
+    "source": "APLUX authored illustration", "file": "food-web.jpeg",
+    "request": {"model": "clef-flash", "state": {"task": "Look at the attached image and answer the question."}, "questions": {"answer": {"type": "choice", "instructions": "In the diagram, what kind of consumer is the rabbit?", "criteria": {"A": "Secondary consumer", "B": "Tertiary consumer", "C": "Primary consumer", "D": "Producer"}}}},
+    "reference": {"answer": "C"}
+  },
+  {
+    "id": "support-ticket",
+    "title": "Route a support ticket",
+    "subtitle": "Support ticket",
+    "type_label": "Choice",
+    "source": "APLUX authored example \u00b7 Text only",
+    "request": {
+      "model": "clef-flash",
+      "state": {
+        "task": "A customer reports: I was charged twice for the same order. The product arrived and works correctly. I can sign in to my account. Please refund the duplicate payment."
+      },
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Which team should handle this request?",
+          "criteria": {
+            "Billing": "Duplicate payments, refunds, and invoice questions.",
+            "Technical support": "Broken products, software errors, and troubleshooting.",
+            "Account access": "Sign-in failures, password resets, and locked accounts."
+          }
+        }
+      }
+    },
+    "reference": {
+      "answer": "Billing"
+    }
+  }
+]

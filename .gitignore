@@ -1,0 +1,10 @@
+build/
+__pycache__/
+*.pyc
+*.log
+*.so
+*.egg-info/
+.venv*/
+dist/
+/models/*
+!/models/README.md

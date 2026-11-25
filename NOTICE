@@ -1,0 +1,30 @@
+Clef-Flash
+
+Upstream model: Cloudflare/Clef-Flash (https://huggingface.co/Cloudflare/clef-flash),
+based on Qwen/Qwen3.5-9B (https://huggingface.co/Qwen/Qwen3.5-9B).
+
+The supplied model material retains its Apache-2.0 terms, including Copyright 2026 Alibaba Cloud.
+The model preprocessing and SDK integration have been adapted for on-device structured decisions.
+
+SDK components include nlohmann/json (MIT) and Eigen 3.4.0 (MPL-2.0).
+Their license and copyright notices are included in LICENSES/. The SDK builds the MPL-2.0 parts of
+Eigen from the unmodified official release. The corresponding source is available at
+https://gitlab.com/libeigen/eigen/-/archive/3.4.0/eigen-3.4.0.tar.gz
+
+The byte-level BPE tokenizer is implemented in the SDK;
+Unicode normalization, regular expressions and Unicode data use statically linked ICU. The complete supplied terms are in LICENSES/ICU.txt.
+The common Pandora Runtime interface is distributed under Apache-2.0. See LICENSES/Apache-2.0.txt.
+The SDK includes the QNN runtime and Genie under their vendor terms. Genie uses the Hugging Face Tokenizers library
+under Apache-2.0. The SDK statically links Tokenizers and its native Rust dependencies through Genie.
+See the bundled Genie-Rust.txt for the dependency inventory, copyright notices and license terms.
+Aidlux LMS is a device prerequisite.
+Image codecs, zlib and OpenSSL are statically linked. See their notices in LICENSES/.
+GNU OpenMP (libgomp) is bundled as a shared library. Its terms and source information are in LICENSES/libgomp.txt.
+The C++ runtime is a system dependency.
+
+The bundled example illustrations and their questions are original APLUX material, copyright APLUX,
+licensed under the Apache License 2.0. The license text is in LICENSES/Apache-2.0.txt.
+The illustration sources distributed with this project are:
+- demo/media/skiing.jpeg (also distributed as examples/inputs/skiing.jpeg).
+- demo/media/sandwich.jpeg.
+- demo/media/food-web.jpeg.
